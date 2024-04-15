@@ -10,29 +10,34 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <img class="logo header__logo" src="img/logo.png" alt="Логотип магазина">
+      <img class="logo header__logo" src="img/logo-header.svg" alt="Логотип магазина" width="145" height="36">
       <div class="search">
-        <label><input class="search__input" type="search" placeholder="Текст поиска"></label>
+
+        <label><span class="search__icon"></span><input class="search__input" type="search"
+            placeholder="Текст поиска"></label>
         <button class="search-btn" type="button">Найти</button>
       </div>
 
       <nav class="header__user-nav">
         <ul class="header__user-nav-list">
           <li class="header__user-nav-element">
-            <button class="header__user-nav-button" type="button">Войти</button>
+            <span class="header__login-icon"></span><button class="header__user-nav-button" type="button">Войти</button>
           </li>
           <li class="header__user-nav-element">
             <span class="visually-hidden text header__user-nav-button">Коля Петухов</span>
           </li>
           <li class="header__user-nav-element">
-            <button class="text header__user-nav-button" type="button">Выйти</button>
+            <span class="header__logout-icon"></span><button class="text header__user-nav-button"
+              type="button">Выйти</button>
           </li>
           <li class="header__user-nav-element">
-            <button class="header__user-nav-button" type="button">Сравнить</button>
+            <span class="header__compare-icon"></span><button class="header__user-nav-button"
+              type="button">Сравнить</button>
           </li>
-          <li class="header__user-nav-element">
-            <span class="text header__basket-count">3</span>
-            <button class="header__user-nav-button" type="button">Корзина</button>
+          <li class="header__basket-element">
+            <span class="text header__user-nav--count">3</span>
+            <span class="header__basket-icon"></span><button class="header__user-nav-button"
+              type="button">Корзина</button>
           </li>
         </ul>
       </nav>
@@ -40,7 +45,8 @@
 
       <div class="header__catalog">
         <p class="h3-title header__text">каталог товаров</p>
-        <button class="header__show-btn"><span class="visually-hidden">Show catalog</span></button>
+        <button class="header__show-btn"><span class="visually-hidden">Show catalog</span></button><span
+          class="header__show-button"></span>
         <div class="visually-hidden header__catalog-list">
           <ul>
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Виртуальная реальность</a></li>
@@ -63,9 +69,7 @@
           <li class="main-nav__item"><a class="h3-title main-nav__link" href="#">контакты</a></li>
         </ul>
       </nav>
-
     </header>
-
 
 
     <main>
@@ -198,22 +202,22 @@
 
         <div class="catalog__cards">
           <div class="product-card">
-            <a class="product-card__link" href="#"><img src="" alt="фото товара"></a>
+            <a class="product-card__link" href="#"><img src="../public/img/catalog-products/product-1.png" alt="фото товара" width="360" height="380"></a>
             <p class="text-bold product-card__title">Любительская селфи-палка</p>
             <p class="text-simple product-card__price"><span class="visually-hidden">Цена</span>500 ₽</p>
           </div>
           <div class="product-card">
-            <a class="product-card__link" href="#"><img src="" alt="фото товара"></a>
+            <a class="product-card__link" href="#"><img src="../public/img/catalog-products/product-2.png" alt="фото товара" width="360" height="380"></a>
             <p class="text-bold product-card__title">Профессиональная селфи-палка </p>
             <p class="text-simple product-card__price"><span class="visually-hidden">Цена</span>1 500 ₽</p>
           </div>
           <div class="product-card">
-            <a class="product-card__link" href="#"><img src="" alt="фото товара"></a>
+            <a class="product-card__link" href="#"><img src="../public/img/catalog-products/product-3.png" alt="фото товара" width="360" height="380"></a>
             <p class="text-bold product-card__title">Непотопляемая селфи-палка</p>
             <p class="text-simple product-card__price"><span class="visually-hidden">Цена</span>2 500 ₽</p>
           </div>
           <div class="product-card">
-            <a class="product-card__link" href="#"><img src="" alt="фото товара"></a>
+            <a class="product-card__link" href="#"><img src="../public/img/catalog-products/product-4.png" alt="фото товара" width="360" height="380"></a>
             <p class="text-bold product-card__title">Селфи-палка «Следуй за мной»</p>
             <p class="text-simple product-card__price"><span class="visually-hidden">Цена</span>1 500 ₽</p>
           </div>
@@ -236,9 +240,9 @@
     <footer>
       <section class="footer__address">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <img class="logo footer__logo" src="img/logo.png" alt="Логотип магазина">
+        <img class="logo footer__logo" src="img/logo-footer.svg" alt="Логотип магазина" width="145" height="36">
         <address class="text footer__text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-        <div class="line footer__line"></div>
+        <span class="line footer__line"></span>
       </section>
       <section>
         <h2 class="visually-hidden">Панель навигации</h2>
@@ -254,14 +258,15 @@
         <h2 class="visually-hidden">Телефон магазина</h2>
         <div class="footer__address">
           <a class="footer__tel" href="tel:+7(812)8121212">Тел.: +7 (812) 812-12-12</a>
-          <img src="" alt="Лого HTMLAcademy">
+          <img src="img/academy-footer.svg" alt="Лого HTMLAcademy" width="115" height="33">
         </div>
       </section>
       <section class="footer__social">
         <h2 class="visually-hidden">Редирект на социальные сети</h2>
         <ul class="footer__social-list">
           <li class="footer__social-element">
-            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook"></a>
+            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook">
+            </a>
           </li>
           <li class="footer__social-element">
             <a href="#" class="footer__social-link" aria-label="Переход на страницу instagram"></a>
