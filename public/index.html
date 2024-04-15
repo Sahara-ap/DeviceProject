@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru">test
 
 <head>
   <meta charset="utf-8">
   <title>Device</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 
 <body>
   <div class="wrapper">
     <header class="header">
-      <img class="logo header__logo" src="img/logo.png" alt="Логотип магазина">
+      <img class="logo header__logo" src="img/logo-header.svg" alt="Логотип магазина" width="145" height="36">
       <div class="search">
-        <label><input class="search__input" type="search" placeholder="Текст поиска"></label>
+
+        <label><span class="search__icon"></span><input class="search__input" type="search"
+            placeholder="Текст поиска"></label>
         <button class="search-btn" type="button">Найти</button>
       </div>
 
       <nav class="header__user-nav">
         <ul class="header__user-nav-list">
           <li class="header__user-nav-element">
-            <button class="header__user-nav-button" type="button">Войти</button>
+            <span class="header__login-icon"></span><button class="header__user-nav-button" type="button">Войти</button>
           </li>
           <li class="header__user-nav-element">
             <span class="visually-hidden text header__user-nav-button">Коля Петухов</span>
           </li>
           <li class="header__user-nav-element">
-            <button class="text header__user-nav-button" type="button">Выйти</button>
+            <span class="header__logout-icon"></span><button class="text header__user-nav-button"
+              type="button">Выйти</button>
           </li>
           <li class="header__user-nav-element">
-            <button class="header__user-nav-button" type="button">Сравнить</button>
+            <span class="header__compare-icon"></span><button class="header__user-nav-button"
+              type="button">Сравнить</button>
           </li>
-          <li class="header__user-nav-element">
-            <span class="text header__basket-count">3</span>
-            <button class="header__user-nav-button" type="button">Корзина</button>
+          <li class="header__basket-element">
+            <span class="text header__user-nav--count">3</span>
+            <span class="header__basket-icon"></span><button class="header__user-nav-button"
+              type="button">Корзина</button>
           </li>
         </ul>
       </nav>
@@ -39,7 +46,8 @@
 
       <div class="header__catalog">
         <p class="h3-title header__text">каталог товаров</p>
-        <button class="header__show-btn"><span class="visually-hidden">Show catalog</span></button>
+        <button class="header__show-btn"><span class="visually-hidden">Show catalog</span></button><span
+          class="header__show-button"></span>
         <div class="visually-hidden header__catalog-list">
           <ul>
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Виртуальная реальность</a></li>
@@ -62,18 +70,21 @@
           <li class="main-nav__item"><a class="h3-title main-nav__link" href="#">контакты</a></li>
         </ul>
       </nav>
-
     </header>
+
     <main>
       <h1 class="visually-hidden">Презентация магазина техники</h1>
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <img class="slider__photo" src="" alt="Фотография слайдера">
-        <button class="slider__button slider-prev" type="button"><span class="visually-hidden">Предыдущее фото
-            фото</span></button>
-        <button class="slider__button slider-next" type="button"><span class="visually-hidden">Следующее
-            фото</span></button>
+        <img class="slider__photo" src="img/slider/slider-1opt.png" alt="Фотография слайдера">
+        <button class="slider-controls slider-controls--prev" type="button" aria-label="Предыдущее фото">
+          <span class="slider__icon-prev"></span>
+        </button>
+        <button class="slider-controls slider-controls--next" type="button" aria-label="Следующее фото">
+          <span class="slider__icon-next"></span>
+        </button>
         <div class="slider-info">
+          <p class="slider-info__counter">01</p>
           <h3 class="slider__title">Порхает как бабочка,<br>жалит как пчела!</h3>
           <p class="text slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
             замаскированным
@@ -111,48 +122,61 @@
         <ul class="goods__list">
           <li class="goods__item">
             <a class="goods__link" href="#">
-              <img src="" alt="Виртуальная реальность">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/glasses.svg" alt="Виртуальная реальность" width="97" height="55">
+              </div>
               <p class="goods__item-title">Виртуальная реальность</p>
             </a>
           </li>
           <li class="goods__item">
             <a class="goods__link" href="#">
-              <img src="" alt="Моноподы для селфи">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/monopod.svg" alt="Моноподы для селфи" width="86" height="117">
+              </div>
               <p class="goods__item-title">Моноподы для селфи</p>
             </a>
           </li>
           <li class="goods__item">
             <a class="goods__link" href="#">
-              <img src="" alt="Экшн-камеры">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/camera.svg" alt="Экшн-камеры" width="71" height="87">
+              </div>
               <p class="goods__item-title">Экшн-камеры</p>
             </a>
           </li>
           <li class="goods__item">
             <a class="goods__link" href="#">
-              <img src="" alt="Фитнес-браслеты">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/sport-bracelet.svg" alt="Фитнес-браслеты" width="107" height="65">
+              </div>
               <p class="goods__item-title">Фитнес-браслеты</p>
             </a>
           </li>
           <li class="goods__item">
             <a href="#">
-              <img src="" alt="Умные часы">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/watches.svg" alt="Умные часы" width="56" height="98">
+              </div>
               <p class="goods__item-title">Умные часы</p>
             </a>
           </li>
           <li class="goods__item">
             <a class="goods__link" href="#">
-              <img src="" alt="Квадрокоптеры">
+              <div class="goods__img-block">
+                <img src="img/catalog-mini/quadrocopter.svg" alt="Квадрокоптеры" width="132" height="69">
+              </div>
               <p class="goods__item-title">Квадрокоптеры</p>
             </a>
           </li>
         </ul>
       </section>
+
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
         <div class="tabs">
           <div class="tabs__controls">
-            <button class="h3-title h3-title--yellow tabs__control is-active">доставка</button>
-            <button class="h3-title h3-title--yellow tabs__control">гарантия</button>
+            <button class="h3-title h3-title--yellow tabs__control is-active">доставка</button><br>
+            <button class="h3-title h3-title--yellow tabs__control">гарантия</button><br>
             <button class="h3-title h3-title--yellow tabs__control">кредит</button>
           </div>
           <div class="tabs__content">
@@ -162,7 +186,7 @@
                 <br>к вашему подъезду совершенно бесплатно! Ведь
                 <br>мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
-              <div class="tabs__logo"></div>
+              <span class="tabs__dilivery-logo"></span>
             </div>
             <div class="tabs__element">
               <h3 class="tabs__title">гарантия</h3>
@@ -170,7 +194,7 @@
                 <br>сгорит дом — не переживайте, мы выдадим вам новый.
                 <br>Товар, не дом, конечно же.
               </p>
-              <div class="tabs__logo"></div>
+              <span class="tabs__logo"></span>
             </div>
             <div class="tabs__element">
               <h3 class="tabs__title">кредит</h3>
@@ -178,7 +202,7 @@
                 <br>Кредитные консультанты подберут для вас наиболее выгодные
                 <br>условия кредита. Выгодные для банка, разумеется.
               </p>
-              <div class="tabs__logo"></div>
+              <span class="tabs__logo"></span>
             </div>
           </div>
           <div class="tabs__background"></div>
@@ -186,9 +210,11 @@
 
         <div class="exclusive-order">
           <h2 class="visually-hidden">Эксклюзивный заказ</h2>
-          <div class="exclusive-order__logo"></div>
-          <p class="exclusive-order__title">Доставим редкий товар под заказ</p>
-          <button class="exclusive-order__btn-info"></button>
+          <span class="exclusive-order__logo"></span>
+          <div>
+            <p class="exclusive-order__title">Доставим редкий товар под заказ</p>
+            <button class="exclusive-order__tip"></button>
+          </div>
         </div>
       </section>
 
@@ -254,9 +280,9 @@
     <footer>
       <section class="footer__address">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <img class="logo footer__logo" src="img/logo.png" alt="Логотип магазина">
+        <img class="logo footer__logo" src="img/logo-footer.svg" alt="Логотип магазина" width="145" height="36">
         <address class="text footer__text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-        <div class="line footer__line"></div>
+        <span class="line footer__line"></span>
       </section>
       <section>
         <h2 class="visually-hidden">Панель навигации</h2>
@@ -272,14 +298,15 @@
         <h2 class="visually-hidden">Телефон магазина</h2>
         <div class="footer__address">
           <a class="footer__tel" href="tel:+7(812)8121212">Тел.: +7 (812) 812-12-12</a>
-          <img src="" alt="Лого HTMLAcademy">
+          <img src="img/academy-footer.svg" alt="Лого HTMLAcademy" width="115" height="33">
         </div>
       </section>
       <section class="footer__social">
         <h2 class="visually-hidden">Редирект на социальные сети</h2>
         <ul class="footer__social-list">
           <li class="footer__social-element">
-            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook"></a>
+            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook">
+            </a>
           </li>
           <li class="footer__social-element">
             <a href="#" class="footer__social-link" aria-label="Переход на страницу instagram"></a>
