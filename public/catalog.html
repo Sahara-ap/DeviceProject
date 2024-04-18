@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -12,7 +13,6 @@
     <header class="header">
       <img class="logo header__logo" src="img/logo-header.svg" alt="Логотип магазина" width="145" height="36">
       <div class="search">
-
         <label><span class="search__icon"></span><input class="search__input" type="search"
             placeholder="Текст поиска"></label>
         <button class="search-btn" type="button">Найти</button>
@@ -24,10 +24,10 @@
             <span class="header__login-icon"></span><button class="header__user-nav-button" type="button">Войти</button>
           </li>
           <li class="header__user-nav-element">
-            <span class="visually-hidden text header__user-nav-button">Коля Петухов</span>
+            <span class="visually-hidden header__user-nav-button">Коля Петухов</span>
           </li>
           <li class="header__user-nav-element">
-            <span class="header__logout-icon"></span><button class="text header__user-nav-button"
+            <span class="header__logout-icon"></span><button class="header__user-nav-button"
               type="button">Выйти</button>
           </li>
           <li class="header__user-nav-element">
@@ -35,7 +35,7 @@
               type="button">Сравнить</button>
           </li>
           <li class="header__basket-element">
-            <span class="text header__user-nav--count">3</span>
+            <span class="header__user-nav--count">3</span>
             <span class="header__basket-icon"></span><button class="header__user-nav-button"
               type="button">Корзина</button>
           </li>
@@ -44,29 +44,29 @@
 
 
       <div class="header__catalog">
-        <p class="h3-title header__text">каталог товаров</p>
+        <p class="title title--h3">каталог товаров</p>
         <button class="header__show-btn"><span class="visually-hidden">Show catalog</span></button><span
           class="header__show-button"></span>
         <div class="visually-hidden header__catalog-list">
-          <ul>
+          <ul class="header__catalog-list header__catalog-list--block1 ">
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Виртуальная реальность</a></li>
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Моноподы для cелфи</a></li>
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Экшн-камеры</a></li>
           </ul>
-          <ul>
+          <ul class="header__catalog-list header__catalog-list--block2 ">
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Фитнес-браслеты</a></li>
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Умные часы</a></li>
           </ul>
-          <ul>
+          <ul class="header__catalog-list header__catalog-list--block3 ">
             <li class="header__catalog-element"><a class="header__catalog-link" href="#">Квадрокоптеры</a></li>
           </ul>
         </div>
       </div>
       <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="h3-title main-nav__link" href="#">доставка</a></li>
-          <li class="main-nav__item"><a class="h3-title main-nav__link" href="#">гарантии</a></li>
-          <li class="main-nav__item"><a class="h3-title main-nav__link" href="#">контакты</a></li>
+        <ul class="main-nav__list title title--h3">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">доставка</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">гарантии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -241,16 +241,16 @@
       <section class="footer__address">
         <h2 class="visually-hidden">Адрес магазина</h2>
         <img class="logo footer__logo" src="img/logo-footer.svg" alt="Логотип магазина" width="145" height="36">
-        <address class="text footer__text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+        <address class="footer__text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
         <span class="line footer__line"></span>
       </section>
       <section>
         <h2 class="visually-hidden">Панель навигации</h2>
         <nav class="footer-nav nav">
           <ul class="footer-nav__list">
-            <li class="footer-nav__item"><a class="h3-title footer-nav__link" href="#">доставка</a></li>
-            <li class="footer-nav__item"><a class="h3-title footer-nav__link" href="#">гарантии</a></li>
-            <li class="footer-nav__item"><a class="h3-title footer-nav__link" href="#">контакты</a></li>
+            <li class="footer-nav__item"><a class="title title--h3 footer-nav__link" href="#">доставка</a></li>
+            <li class="footer-nav__item"><a class="title title--h3 footer-nav__link" href="#">гарантии</a></li>
+            <li class="footer-nav__item"><a class="title title--h3 footer-nav__link" href="#">контакты</a></li>
           </ul>
         </nav>
       </section>
@@ -261,18 +261,18 @@
           <img src="img/academy-footer.svg" alt="Лого HTMLAcademy" width="115" height="33">
         </div>
       </section>
+
       <section class="footer__social">
         <h2 class="visually-hidden">Редирект на социальные сети</h2>
         <ul class="footer__social-list">
           <li class="footer__social-element">
-            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook">
-            </a>
+            <a href="#" class="footer__social-link" aria-label="Переход на страницу facebook"><span class="social-icon footer__social-icon1"></span></a>
           </li>
           <li class="footer__social-element">
-            <a href="#" class="footer__social-link" aria-label="Переход на страницу instagram"></a>
+            <a href="#" class="footer__social-link" aria-label="Переход на страницу instagram"><span class="social-icon footer__social-icon2"></span></a>
           </li>
           <li class="footer__social-element">
-            <a href="#" class="footer__social-link" aria-label="Переход на страницу twitter"></a>
+            <a href="#" class="footer__social-link" aria-label="Переход на страницу twitter"><span class="social-icon footer__social-icon3"></span></a>
           </li>
         </ul>
       </section>

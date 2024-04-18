@@ -341,13 +341,14 @@ header {
   background: #F0F0F0;
 }
 .subscription-form input {
-  border: none;
-  border-bottom: 3px solid #C4C4C4;
   width: 557px;
   /* height: 55px; */
-  gap: 0px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
   opacity: 0px;
+
   background: inherit;
+  vertical-align: bottom;
 
 }
 
@@ -363,12 +364,10 @@ header {
   width: 253px;
   height: 57px;
   padding: 18px 39px 18px 39px;
-  gap: 0px;
   border: 3px solid #C4C4C4;
-  /* opacity: 0px; */
-  vertical-align: bottom;
 
   background: inherit;
+  vertical-align: bottom;
 }
 
 .subscription__text-icon {
