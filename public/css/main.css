@@ -448,7 +448,121 @@ footer {
   font-size: 16px;
   line-height: 18.96px;
   text-align: left;
+  list-style: none;
 }
+
+/* Filters */
+.catalog-filter__group {
+  border: none;
+}
+
+.catalog-filter__group div {
+  border-top: 2px solid black;
+
+}
+
+.catalog-filter__list {
+  list-style: none;
+}
+
+.catalog-filter__label {
+  color: black;
+  font-size: 15px;
+  line-height: 17.78px;
+  text-align: center;
+  opacity: 30%;
+}
+
+/* Filters--color */
+.custom-checkbox {
+  display: flex;
+  margin-top: 17px;
+}
+
+.custom-checkbox label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+
+  font-size: 16px;
+  line-height: 18.96px;
+  text-align: left;
+
+}
+
+.custom-checkbox input {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.custom-checkbox .custom-checkbox__icon {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 1s ease, background-image 1s ease, background-image 1s ease;
+
+
+}
+
+.custom-checkbox .custom-checkbox__icon::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+
+}
+
+.custom-checkbox label:hover .custom-checkbox__icon {
+  border-color: rgba(204, 204, 204, 0.25);
+  transition: border-color 50ms ease-out;
+}
+
+.custom-checkbox label:hover .custom-checkbox__icon+.custom-checkbox__label {
+  color: rgba(0, 0, 0, 0.25);
+  transition: color 50ms ease-out;
+}
+
+.custom-checkbox input:checked+.custom-checkbox__icon {
+  border-color: black;
+}
+
+.custom-checkbox input:checked+.custom-checkbox__icon::before {
+  background-image: url(../img/tick-black.svg);
+  transition: background-image 1s ease;
+}
+
+.custom-checkbox input:checked+.custom-checkbox__icon+.custom-checkbox__label {
+  color: black;
+}
+
+
+
+/* .custom-checkbox input:focus-visible +.custom-checkbox__icon {
+  border-color: #525288;
+  background: #000000;
+} */
+
+
+/* Bluetooth */
+.control__label {
+  color: black;
+  font-size: 16px;
+  line-height: 18.96px;
+  text-align: left;
+
+}
+
 
 /* Заголовки */
 .title {
