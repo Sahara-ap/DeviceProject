@@ -340,6 +340,7 @@ header {
 .subscription {
   background: #F0F0F0;
 }
+
 .subscription-form input {
   width: 557px;
   /* height: 55px; */
@@ -413,6 +414,7 @@ footer {
 .footer__social-list {
   list-style: none;
 }
+
 .social-icon {
   background-color: rgba(255, 255, 255, 0.3);
   background-repeat: no-repeat;
@@ -424,14 +426,28 @@ footer {
 
   border-radius: 50%;
 }
+
 .footer__social-icon1 {
   background-image: url("../img/social/facebook.svg");
 }
+
 .footer__social-icon2 {
   background-image: url("../img/social/inst.svg");
 }
+
 .footer__social-icon3 {
   background-image: url("../img/social/twitter.svg");
+}
+
+
+/* CATALOG-PAGE */
+
+/*Breadcrumbs */
+.breadcrumbs__list {
+  color: black;
+  font-size: 16px;
+  line-height: 18.96px;
+  text-align: left;
 }
 
 /* Заголовки */
@@ -458,4 +474,20 @@ footer {
   line-height: 21.13px;
   letter-spacing: 0.2em;
   text-align: center;
+}
+
+.title--h4 {
+  font-size: 16px;
+  line-height: 18.78px;
+  letter-spacing: 0.2em;
+  text-align: left;
+}
+
+.text-bold {
+  color: black;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+
 }
