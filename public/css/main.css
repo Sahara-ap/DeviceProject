@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 @font-face {
   font-family: "Rubik";
   font-weight: 400;
@@ -372,7 +378,7 @@ header {
 }
 
 .subscription__text-icon {
-  background-image: url("../img/tick.svg");
+  background-image: url("../img/controls/tick-green.svg");
   background-repeat: no-repeat;
 
   display: inline-block;
@@ -439,7 +445,7 @@ footer {
   background-image: url("../img/social/twitter.svg");
 }
 
-
+/* ________________________________________________________ */
 /* CATALOG-PAGE */
 
 /*Breadcrumbs */
@@ -452,6 +458,10 @@ footer {
 }
 
 /* Filters */
+.catalog-content__filters-container {
+  background: rgba(240, 240, 240, 1);
+
+}
 .catalog-filter__group {
   border: none;
 }
@@ -533,16 +543,16 @@ footer {
   transition: color 50ms ease-out;
 }
 
-.custom-checkbox input:checked+.custom-checkbox__icon {
+.custom-checkbox input:checked + .custom-checkbox__icon {
   border-color: black;
 }
 
-.custom-checkbox input:checked+.custom-checkbox__icon::before {
-  background-image: url(../img/tick-black.svg);
+.custom-checkbox input:checked + .custom-checkbox__icon::before {
+  background-image: url("../img/controls/tick-black.svg");
   transition: background-image 1s ease;
 }
 
-.custom-checkbox input:checked+.custom-checkbox__icon+.custom-checkbox__label {
+.custom-checkbox input:checked + .custom-checkbox__icon + .custom-checkbox__label {
   color: black;
 }
 
@@ -560,9 +570,79 @@ footer {
   font-size: 16px;
   line-height: 18.96px;
   text-align: left;
-
+  cursor: pointer;
 }
 
+/* Sorting */
+.catalog-sort__sorting-arrow {
+  vertical-align: middle;
+}
+.catalog-sort__order ul{
+  list-style: none;
+}
+.catalog-sort__btn {
+  display: flex;
+}
+.catalog-sort__btn label {
+  position: relative;
+  cursor: pointer;
+}
+
+.catalog-sort__btn label .catalog-sort__order-input {
+position: absolute;
+left: 0;
+top: 0;
+width: 1px;
+height: 1px;
+clip: rect(0 0 0 0);
+}
+.catalog-sort__btn label .catalog-sort__btn-icon {
+  position: absolute;
+  /* top: -30px; */
+  width: 30px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+.catalog-sort__btn label:hover .catalog-sort__btn-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(175, 79, 255, 1);
+}
+.catalog-sort__btn-down .catalog-sort__btn-icon {
+  margin-left: 40px;
+}
+.catalog-sort__btn label .catalog-sort__btn-icon::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 20px;
+  height: 20px;
+  opacity: 0.25;
+}
+.catalog-sort__btn-up label .catalog-sort__btn-icon::before {
+  background-image: url("../img/controls/sort-up.svg");
+  background-repeat: no-repeat;
+}
+.catalog-sort__btn-down label .catalog-sort__btn-icon::before {
+  background-image: url("../img/controls/sort-down.svg");
+  background-repeat: no-repeat;
+}
+
+.catalog-sort__btn label:hover .catalog-sort__btn-icon {
+  opacity: 0.5;
+}
+.catalog-sort__btn label:active .catalog-sort__btn-icon {
+  opacity: 1;
+}
+
+
+/* CATALOG */
+.catalog__cards {
+  margin-top: 30px;
+}
+/* ________________________________________________________ */
 
 /* Заголовки */
 .title {
