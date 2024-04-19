@@ -462,6 +462,7 @@ footer {
   background: rgba(240, 240, 240, 1);
 
 }
+
 .catalog-filter__group {
   border: none;
 }
@@ -543,16 +544,16 @@ footer {
   transition: color 50ms ease-out;
 }
 
-.custom-checkbox input:checked + .custom-checkbox__icon {
+.custom-checkbox input:checked+.custom-checkbox__icon {
   border-color: black;
 }
 
-.custom-checkbox input:checked + .custom-checkbox__icon::before {
+.custom-checkbox input:checked+.custom-checkbox__icon::before {
   background-image: url("../img/controls/tick-black.svg");
   transition: background-image 1s ease;
 }
 
-.custom-checkbox input:checked + .custom-checkbox__icon + .custom-checkbox__label {
+.custom-checkbox input:checked+.custom-checkbox__icon+.custom-checkbox__label {
   color: black;
 }
 
@@ -574,28 +575,36 @@ footer {
 }
 
 /* Sorting */
+.catalog-sort {
+  background: rgba(240, 240, 240, 1);
+}
+
 .catalog-sort__sorting-arrow {
   vertical-align: middle;
 }
-.catalog-sort__order ul{
+
+.catalog-sort__order ul {
   list-style: none;
 }
+
 .catalog-sort__btn {
   display: flex;
 }
+
 .catalog-sort__btn label {
   position: relative;
   cursor: pointer;
 }
 
 .catalog-sort__btn label .catalog-sort__order-input {
-position: absolute;
-left: 0;
-top: 0;
-width: 1px;
-height: 1px;
-clip: rect(0 0 0 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
 }
+
 .catalog-sort__btn label .catalog-sort__btn-icon {
   position: absolute;
   /* top: -30px; */
@@ -603,15 +612,18 @@ clip: rect(0 0 0 0);
   height: 30px;
   margin-bottom: 50px;
 }
+
 .catalog-sort__btn label:hover .catalog-sort__btn-icon {
   position: absolute;
   width: 30px;
   height: 30px;
   border: 2px solid rgba(175, 79, 255, 1);
 }
+
 .catalog-sort__btn-down .catalog-sort__btn-icon {
   margin-left: 40px;
 }
+
 .catalog-sort__btn label .catalog-sort__btn-icon::before {
   content: '';
   position: absolute;
@@ -621,10 +633,12 @@ clip: rect(0 0 0 0);
   height: 20px;
   opacity: 0.25;
 }
+
 .catalog-sort__btn-up label .catalog-sort__btn-icon::before {
   background-image: url("../img/controls/sort-up.svg");
   background-repeat: no-repeat;
 }
+
 .catalog-sort__btn-down label .catalog-sort__btn-icon::before {
   background-image: url("../img/controls/sort-down.svg");
   background-repeat: no-repeat;
@@ -633,6 +647,7 @@ clip: rect(0 0 0 0);
 .catalog-sort__btn label:hover .catalog-sort__btn-icon {
   opacity: 0.5;
 }
+
 .catalog-sort__btn label:active .catalog-sort__btn-icon {
   opacity: 1;
 }
@@ -642,6 +657,51 @@ clip: rect(0 0 0 0);
 .catalog__cards {
   margin-top: 30px;
 }
+
+.product-card__price {
+  line-height: 21.33px;
+  text-align: right;
+}
+
+.catalog__button-container {
+  text-align: center;
+  height: 55px;
+  line-height: 55px;
+  border: 3px solid #E5E5E5;
+}
+
+.catalog__add-more-btn {
+  vertical-align: middle;
+}
+
+/* Pagintion */
+.pagination {
+  height: 71px;
+  margin: 20px 0px;
+  background: #EBEBEB;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__list {
+  display: flex;
+  list-style: none;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+}
+.pagination__link {
+  color: #444444;
+  margin-left: 30px;
+
+}
+
+
+
 /* ________________________________________________________ */
 
 /* Заголовки */
