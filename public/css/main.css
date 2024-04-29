@@ -1,7 +1,10 @@
-/* * {
+/**
+* Remove the margin in all browsers.
+*/
+
+body {
   margin: 0;
-  padding: 0;
-} */
+}
 
 
 @font-face {
@@ -28,7 +31,14 @@
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;  /* оставляем, есть в камерас и в академии*/
+  min-height: 100%;
+
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -36,7 +46,7 @@ body {
   background-color: #fff;
   color: #444444;
 }
-
+/* a - есть в cameras */
 a {
   text-decoration: none;
   color: black;
@@ -82,80 +92,113 @@ header {
   background: #FFE17F;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto
+}
+
+.wrapper main {
+  flex-grow: 1;
+}
+
+.header__container-top {
+  display: flex;
+  align-items: center;
+}
+
 .search {
+  margin-right: 26.5px;
+  width: 517px;
+
   font-size: 16px;
   line-height: 20px;
   color: black;
 }
 
 .search__icon {
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
 }
 
 .header__user-nav {
+  width: auto;
   color: black;
 }
 
-.header__login-icon {
-  background-image: url("../img/icons/login.svg");
-  background-repeat: no-repeat;
+.header__user-nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
 
+  list-style: none;
+}
+.header__user-nav-list .header__user-nav-element:nth-child(3) {
+  margin-left: 300px;
+
+  border: 1px solid red;
+}
+
+
+.header__login-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
+
   vertical-align: text-bottom;
+
+  background-image: url("../img/icons/login.svg");
+  background-repeat: no-repeat;
 }
 
 .header__basket-icon {
-  background-image: url("../img/icons/basket.svg");
-  background-repeat: no-repeat;
-
   display: inline-block;
   width: 16px;
   height: 16px;
+
   vertical-align: text-bottom;
+
+  background-image: url("../img/icons/basket.svg");
+  background-repeat: no-repeat;
 }
 
 .header__compare-icon {
-  background-image: url("../img/icons/comparing.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 16px;
   height: 16px;
+
   vertical-align: text-bottom;
+
+  background-image: url("../img/icons/comparing.svg");
+  background-repeat: no-repeat;
 }
 
 
 .header__show-button {
-  background-image: url("../img/icons/catalog-show.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 50px;
   height: 50px;
+
   vertical-align: text-bottom;
+
+  background-image: url("../img/icons/catalog-show.svg");
+  background-repeat: no-repeat;
 }
 
-.header__user-nav {
-  font-family: Raleway;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 23.48px;
-  letter-spacing: 0.2em;
-  text-align: center;
 
-}
 
 .header__catalog-list {
   font-size: 16px;
   line-height: 18px;
   color: black;
   text-align: left;
+
   list-style-type: none;
 }
 
@@ -177,19 +220,21 @@ header {
 
 /* Slider */
 .slider__icon-prev {
-  background-image: url("../img/slider/slider-prev-btn--opt.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 20px;
   height: 60px;
+
+  background-image: url("../img/slider/slider-prev-btn--opt.svg");
+  background-repeat: no-repeat;
 }
 
 .slider__icon-next {
-  background-image: url("../img/slider/slider-next-btn--opt.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 20px;
   height: 60px;
+
+  background-image: url("../img/slider/slider-next-btn--opt.svg");
+  background-repeat: no-repeat;
 }
 
 .slider-info__counter {
@@ -223,14 +268,15 @@ header {
 }
 
 .goods__block {
-  width: 160px;
-  height: 160px;
-  background-color: #FFE17F;
-  color: black;
-  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 160px;
+  height: 160px;
+
+  background-color: #FFE17F;
+  color: black;
+  /* text-align: center; */
 
 }
 
@@ -256,22 +302,23 @@ header {
 }
 
 .tabs__controls .is-active {
-  background: black;
   color: #FFE17F;
+  background: black;
 }
 
 
 .tabs__control.is-active button {
-  background-color: inherit;
   color: inherit;
+  background-color: inherit;
 }
 
 .tabs__dilivery-logo {
-  background-image: url("../img/services/service-delivery.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 136px;
   height: 164px;
+
+  background-image: url("../img/services/service-delivery.svg");
+  background-repeat: no-repeat;
 }
 
 .tabs__background {
@@ -289,13 +336,14 @@ header {
 }
 
 .exclusive-order__logo {
-  background: #FFE17F url("../img/services/exlusive-logo.svg") no-repeat;
-
-  color: black;
   display: inline-block;
   width: 125px;
   height: 100px;
+
   vertical-align: middle;
+  color: black;
+
+  background: #FFE17F url("../img/services/exlusive-logo.svg") no-repeat;
   background-position: center;
 }
 
@@ -311,11 +359,12 @@ header {
 }
 
 .exclusive-order__tip-icon {
-  background-image: url("../img/icons/tip.svg");
-  background-repeat: no-repeat;
   display: inline-block;
   width: 40px;
   height: 40px;
+
+  background-image: url("../img/icons/tip.svg");
+  background-repeat: no-repeat;
 }
 
 /* About */
@@ -350,50 +399,52 @@ header {
 .subscription-form input {
   width: 557px;
   /* height: 55px; */
+  vertical-align: bottom;
+
   border: none;
   border-bottom: 3px solid #C4C4C4;
   opacity: 0px;
-
   background: inherit;
-  vertical-align: bottom;
 
 }
 
 .subscription-form button[type="submit"] {
+  width: 253px;
+  height: 57px;
+  padding: 18px 39px 18px 39px;
+
   font-family: Raleway;
   font-size: 18px;
   font-weight: 800;
   line-height: 21.13px;
   letter-spacing: 0.2em;
   text-align: center;
+  vertical-align: bottom;
   color: black;
 
-  width: 253px;
-  height: 57px;
-  padding: 18px 39px 18px 39px;
   border: 3px solid #C4C4C4;
-
   background: inherit;
-  vertical-align: bottom;
 }
 
 .subscription__text-icon {
-  background-image: url("../img/controls/tick-green.svg");
-  background-repeat: no-repeat;
-
   display: inline-block;
   width: 16px;
   height: 16px;
+
   vertical-align: baseline;
+
+  background-image: url("../img/controls/tick-green.svg");
+  background-repeat: no-repeat;
+
 }
 
 
 /* footer */
 footer {
-  background: #444444;
-  color: #FFFFFF;
   width: 1440px;
   /* height: 321px; */
+  color: #FFFFFF;
+  background: #444444;
 
 }
 
@@ -401,6 +452,7 @@ footer {
   display: inline-block;
   width: 80px;
   height: 7px;
+
   background: #FFC500;
 }
 
@@ -422,15 +474,15 @@ footer {
 }
 
 .social-icon {
-  background-color: rgba(255, 255, 255, 0.3);
-  background-repeat: no-repeat;
-
   display: inline-block;
   width: 40px;
   height: 40px;
+
   vertical-align: baseline;
 
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-repeat: no-repeat;
 }
 
 .footer__social-icon1 {
@@ -450,10 +502,11 @@ footer {
 
 /*Breadcrumbs */
 .breadcrumbs__list {
-  color: black;
   font-size: 16px;
   line-height: 18.96px;
   text-align: left;
+  color: black;
+
   list-style: none;
 }
 
@@ -477,10 +530,11 @@ footer {
 }
 
 .catalog-filter__label {
-  color: black;
   font-size: 15px;
   line-height: 17.78px;
   text-align: center;
+  color: black;
+
   opacity: 30%;
 }
 
@@ -513,6 +567,7 @@ footer {
   position: absolute;
   left: 0;
   top: -3px;
+
   width: 20px;
   height: 20px;
   border: 2px solid #CCCCCC;
@@ -528,6 +583,7 @@ footer {
   position: absolute;
   top: 30%;
   left: 30%;
+
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
@@ -567,11 +623,11 @@ footer {
 
 /* Bluetooth */
 .control__label {
-  color: black;
   font-size: 16px;
   line-height: 18.96px;
   text-align: left;
   cursor: pointer;
+  color: black;
 }
 
 /* Sorting */
@@ -629,8 +685,10 @@ footer {
   position: absolute;
   top: 30%;
   left: 30%;
+
   width: 20px;
   height: 20px;
+
   opacity: 0.25;
 }
 
@@ -664,9 +722,11 @@ footer {
 }
 
 .catalog__button-container {
-  text-align: center;
   height: 55px;
+
+  text-align: center;
   line-height: 55px;
+
   border: 3px solid #E5E5E5;
 }
 
@@ -676,13 +736,13 @@ footer {
 
 /* Pagintion */
 .pagination {
-  height: 71px;
-  margin: 20px 0px;
-  background: #EBEBEB;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 71px;
+  margin: 20px 0px;
+
+  background: #EBEBEB;
 }
 
 .pagination__list {
@@ -738,10 +798,9 @@ footer {
 }
 
 .text-bold {
-  color: black;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   text-align: left;
-
+  color: black;
 }
