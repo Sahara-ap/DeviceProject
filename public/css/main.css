@@ -155,6 +155,7 @@ header .container {
 
 .header__user-nav-list {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 
@@ -163,6 +164,8 @@ header .container {
 
 .search-field {
   width: 359px;
+  box-sizing: border-box;
+  height: 40px;
 
   border: 2px solid black;
   border-right: none;
@@ -170,7 +173,7 @@ header .container {
 }
 
 .search__input {
-  height: 100%;
+  height: 40px;
   width: calc(100% - 32px);
   padding-left: 16px;
 
@@ -197,11 +200,12 @@ header .container {
 
 .search-button {
   margin-right: 28px;
+  min-height: 40px;
 }
 
 .search-btn {
   min-width: 160px;
-  min-height: 100%;
+  min-height: 40px;
   padding: 0 55.5px;
 
   background-color: inherit;
