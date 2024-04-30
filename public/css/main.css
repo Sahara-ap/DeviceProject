@@ -715,11 +715,15 @@ header .container {
 footer {
   color: #FFFFFF;
   background: #444444;
+  padding-top: 62px;
 }
 
+.footer__logo {
+  display: block;
+  margin-bottom: 35px;
+}
 .footer__block {
   display: flex;
-  padding-top: 62px;
 }
 
 .footer__address {
@@ -750,6 +754,8 @@ footer {
 .footer-nav__list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
   width: 444px;
   list-style: none;
 }
@@ -765,7 +771,7 @@ footer {
 
 .footer-contact img {
   display: block;
-
+  margin-top: 63px;
 }
 
 .footer__tel {
@@ -775,12 +781,11 @@ footer {
 
 .footer__social-list {
   position: relative;
-  top: -50px;
-  left: 47%;
+  top: -70px;
+  left: 44%;
   display: flex;
   justify-content: space-between;
   width: 150px;
-  border: 1px solid #000;
   margin: 0;
   padding: 0;
 }
