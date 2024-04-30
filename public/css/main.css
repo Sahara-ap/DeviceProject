@@ -36,7 +36,8 @@ html {
 }
 
 body {
-  margin: 0;  /* оставляем, есть в камерас и в академии*/
+  margin: 0;
+  /* оставляем, есть в камерас и в академии*/
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -48,6 +49,7 @@ body {
   background-color: #fff;
   color: #444444;
 }
+
 /* a - есть в cameras */
 a {
   text-decoration: none;
@@ -99,9 +101,11 @@ li {
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 }
+
 .wrapper main {
   flex-grow: 1;
 }
+
 .container {
   width: 100%;
   max-width: 1160px;
@@ -109,6 +113,7 @@ li {
   padding: 0 60px;
 
 }
+
 .visually-hidden {
   position: absolute;
 
@@ -126,7 +131,7 @@ li {
 
 /* Header */
 header .container {
-  position:  relative;
+  position: relative;
   margin-top: 40px;
   height: 300px;
 
@@ -141,38 +146,11 @@ header .container {
   left: 60px;
 }
 
-.header__container-top {
-  display: flex;
-  align-items: center;
-  padding-top: 48px;
-}
-
-.search {
-  width: 517px;
-
-  font-size: 16px;
-  line-height: 20px;
-  color: black;
-
-  border: 1px solid #000;
-}
-
-.search__icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-}
-
 .header__user-nav {
-  width: 600px;
-  margin-left: auto;
+  padding-top: 48px;
+  margin-bottom: 30px;
 
   color: black;
-  border: 1px solid #000;
 }
 
 .header__user-nav-list {
@@ -182,17 +160,74 @@ header .container {
 
   list-style: none;
 }
-.header__user-nav-element{
+
+.search-field {
+  width: 359px;
+
+  border: 2px solid black;
+  border-right: none;
+  border-radius: 50px 0 0 50px;
+}
+
+.search__input {
+  height: 100%;
+  width: calc(100% - 32px);
+  padding-left: 16px;
+
+  border: none;
+  background: inherit;
+}
+
+.search__input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+
+.search__icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  vertical-align: middle;
+
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+}
+
+.search-button {
   margin-right: 28px;
-  border: 1px solid red;
+}
+
+.search-btn {
+  min-width: 160px;
+  min-height: 100%;
+  padding: 0 55.5px;
+
+  background-color: inherit;
+  border: 2px solid black;
+  border-radius: 0 50px 50px 0;
+}
+
+.header__user-nav-element {
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 1px solid red; */
+
 
   &:last-child {
     margin-right: 0;
   }
 }
-.header__user-nav-element:nth-child(3) {
-  margin-left: auto;
 
+.header__user-nav-element button {
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+
+  background: inherit;
 }
 
 .header__login-icon {
@@ -216,6 +251,30 @@ header .container {
   background-image: url("../img/icons/comparing.svg");
   background-repeat: no-repeat;
 }
+
+.header__user-nav--count {
+  position: relative;
+  z-index: 1;
+}
+.header__user-nav--count::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  z-index: -1;
+
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 50%;
+  background: #FFFFFF;
+  background-position: center;
+}
+
 .header__basket-icon {
   display: inline-block;
   width: 16px;
@@ -270,6 +329,7 @@ header .container {
   display: flex;
   list-style-type: none;
 }
+
 .header__nav-right-item {
   margin-right: 45px;
 
@@ -294,6 +354,7 @@ header .container {
 .slider__left-block {
   width: 560px;
 }
+
 .slider-info {
   width: 560px;
 }
@@ -331,14 +392,17 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+
 .slider__link {
   width: 220px;
   border: 1px solid black;
 }
+
 .slider-pagination__list {
   display: flex;
   list-style: none;
 }
+
 .slider-pagination__button {
   width: 12px;
   height: 12px;
@@ -354,9 +418,11 @@ header .container {
   display: flex;
   margin-bottom: 108px;
 }
+
 .slider__distance {
   margin-right: 20px;
 }
+
 .slider__distance-title,
 .slider__radius-title {
   font-size: 36px;
@@ -564,6 +630,7 @@ footer {
   display: flex;
   padding-top: 62px;
 }
+
 .footer__address {
   width: 236px;
   margin-right: 117px;
@@ -571,12 +638,15 @@ footer {
   font-size: 16px;
   line-height: 20px;
 }
+
 .footer__logo {
   margin-bottom: 35px;
 }
+
 .footer__text {
   margin-bottom: 64px;
 }
+
 .footer__line {
   display: inline-block;
   width: 80px;
@@ -601,10 +671,12 @@ footer {
 .footer-contact {
   margin-left: auto;
 }
+
 .footer-contact img {
   display: block;
 
 }
+
 .footer__tel {
   color: #fff;
   text-decoration: underline;
@@ -621,6 +693,7 @@ footer {
   margin: 0;
   padding: 0;
 }
+
 .footer__social-list {
   list-style: none;
 }
@@ -906,6 +979,7 @@ footer {
   text-align: center;
 
 }
+
 .pagination__link {
   color: #444444;
   margin-left: 30px;
