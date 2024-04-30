@@ -32,12 +32,14 @@ body {
 }
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   margin: 0;  /* оставляем, есть в камерас и в академии*/
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
 
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -92,9 +94,10 @@ li {
 
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
+  /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
-  border: 5px solid red;
 }
 .wrapper main {
   flex-grow: 1;
@@ -283,6 +286,18 @@ header .container {
 
 
 /* Slider */
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider__left-block {
+  width: 560px;
+}
+.slider-info {
+  width: 560px;
+}
+
 .slider__icon-prev {
   display: inline-block;
   width: 20px;
@@ -307,16 +322,52 @@ header .container {
   font-weight: 700;
   line-height: 30px;
   text-align: right;
-  color: #FFFFFF;
-}
-
-.slider__distance {
-  font-size: 36px;
-  text-align: left;
+  /* color: #FFFFFF; */
   color: black;
 }
 
-.slider__details-text {
+.slider__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider__link {
+  width: 220px;
+  border: 1px solid black;
+}
+.slider-pagination__list {
+  display: flex;
+  list-style: none;
+}
+.slider-pagination__button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 3px solid black;
+  box-sizing: border-box;
+  background-color: inherit;
+}
+
+.slider__details {
+  display: flex;
+  margin-bottom: 108px;
+}
+.slider__distance {
+  margin-right: 20px;
+}
+.slider__distance-title,
+.slider__radius-title {
+  font-size: 36px;
+  text-align: left;
+  color: black;
+  margin-bottom: 12px;
+
+}
+
+.slider__distance-text,
+.slider__radius-text {
   font-size: 16px;
   text-align: left;
 }
@@ -509,10 +560,6 @@ footer {
   background: #444444;
 }
 
-footer .container {
-  height: 321px;
-}
-
 .footer__block {
   display: flex;
   padding-top: 62px;
@@ -538,9 +585,6 @@ footer .container {
   background: #FFC500;
 }
 
-.footer-nav {
-
-}
 
 .footer-nav__list {
   display: flex;
