@@ -334,7 +334,7 @@ header .container {
   margin-right: 45px;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -439,6 +439,9 @@ header .container {
 }
 
 /* Goods */
+.goods {
+  margin-bottom: 70px;
+}
 .goods__list {
   display: flex;
   justify-content: space-around;
@@ -475,22 +478,61 @@ header .container {
 /* Services */
 .services {
   position: relative;
+
+  height: 391px;
+  margin-bottom: 70px;
+}
+.services__background {
+  position: absolute;
+  z-index: -1;
+  top: 102px;
+  left: -9.72%;
+
+  width: 1440px;
+  height: 289px;
+  box-sizing: border-box;
+  background: rgba(240, 240, 240, 1);
+}
+
+.tabs {
+  display: flex;
 }
 
 .tabs__controls {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  padding-top: 64px;
+
+  box-sizing: border-box;
   list-style: none;
   border-right: 7px solid #000000;
 }
 
-.tabs__controls .is-active {
+.tabs__control-items {
+  height: 40px;
+  margin-bottom: 37px;
+
+  cursor: pointer;
+}
+
+.tabs__control-items.is-active {
+  background: black;
+}
+.tabs__control-items.is-active button {
   color: #FFE17F;
   background: black;
 }
+.tabs__controls button {
+ cursor: pointer;
+}
 
-
-.tabs__control.is-active button {
-  color: inherit;
-  background-color: inherit;
+.tabs__content {
+  padding-top: 72.5px;
+  padding-left: 116px;
+}
+.tabs__element {
+  display: flex;
 }
 
 .tabs__dilivery-logo {
@@ -502,22 +544,20 @@ header .container {
   background-repeat: no-repeat;
 }
 
-.tabs__background {
-  /* position: absolute; */
-  /* top: 102px; */
-  width: 1440px;
-  height: 289px;
-  background: rgba(240, 240, 240, 1);
-}
+
 
 /* exclusive Order */
-.exclusive-order div {
-  background-color: #F0F0F0;
-  color: black;
-}
+.exclusive-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
 
+  color: black;
+
+  background-color: #F0F0F0;
+}
 .exclusive-order__logo {
-  display: inline-block;
   width: 125px;
   height: 100px;
 
@@ -527,16 +567,14 @@ header .container {
   background: #FFE17F url("../img/services/exlusive-logo.svg") no-repeat;
   background-position: center;
 }
-
 .exclusive-order__title {
   font-size: 20px;
   line-height: 23.48px;
   letter-spacing: 0.2em;
-  text-align: center;
 }
 
 .exclusive-order__tip {
-  vertical-align: middle;
+  min-width: 125px;
 }
 
 .exclusive-order__tip-icon {
@@ -549,19 +587,51 @@ header .container {
 }
 
 /* About */
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+.about-info {
+  width: 497px;
+}
 .line {
   width: 84px;
   height: 7px;
+  margin-bottom: 40px;
   background: black;
 }
 
+.about__text {
+  margin-bottom: 30px;
+}
+
 .about-info__delivery-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   text-align: left;
 }
+.about-info__delivery-item {
+  margin-bottom: 19px;
+  padding-left: 24px;
+  color: #FFC700;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.about-info__delivery-item span {
+  color: black;
+}
+
+
+.about-contacts {
+  width: 509px;
+}
 .about-contacts__title {
   font-size: 24px;
   font-weight: 700;
@@ -575,13 +645,30 @@ header .container {
 /* Subscription */
 .subscription {
   background: #F0F0F0;
+  padding-top: 64px;
+  padding-bottom: 56px;
 }
 
+
+.subscription__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 144px;
+}
+.subscription-title {
+  width: 348px;
+}
+.subscription-text {
+  width: 560px;
+}
+
+.subscription-form {
+  display: flex;
+}
 .subscription-form input {
   width: 557px;
-  /* height: 55px; */
-  vertical-align: bottom;
 
+  vertical-align: bottom;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   opacity: 0px;
@@ -607,6 +694,10 @@ header .container {
   background: inherit;
 }
 
+.subscription-form__info {
+  margin-left: auto;
+  align-self: center;
+}
 .subscription__text-icon {
   display: inline-block;
   width: 16px;

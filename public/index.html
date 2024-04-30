@@ -201,51 +201,57 @@
 
         <section class="services">
           <h2 class="visually-hidden">Услуги</h2>
-          <div class="tabs__background"></div>
+          <div class="services__background"></div>
           <div class="tabs">
             <ul class="tabs__controls">
-              <li><button class="title title--h3 is-active">доставка</button></li>
-              <li><button class="title title--h3">гарантия</button></li>
-              <li><button class="title title--h3">кредит</button></li>
+              <li class="tabs__control-items is-active"><button class="title title--h3 ">доставка</button></li>
+              <li class="tabs__control-items"><button class="title title--h3">гарантия</button></li>
+              <li class="tabs__control-items"><button class="title title--h3">кредит</button></li>
             </ul>
             <div class="tabs__content">
               <div class="tabs__element">
-                <h3 class="title title--h2">Доставка</h3>
-                <p class="tabs__text">Мы с удовольствием доставим ваш товар прямо
-                  <br>к вашему подъезду совершенно бесплатно! Ведь
-                  <br>мы неплохо заработаем, поднимая его на ваш этаж.
-                  <span class="tabs__dilivery-logo"></span>
-                </p>
+                <div class="tabs__block">
+                  <h3 class="title title--h2">Доставка</h3>
+                  <p class="tabs__text">Мы с удовольствием доставим ваш товар прямо
+                    <br>к вашему подъезду совершенно бесплатно! Ведь
+                    <br>мы неплохо заработаем, поднимая его на ваш этаж.
+                  </p>
+                </div>
+                <span class="tabs__dilivery-logo"></span>
               </div>
               <div class="visually-hidden tabs__element">
-                <h3 class="title title--h2">Гарантия</h3>
-                <p class="tabs__text">Если из-за возгорания купленного у нас товара у вас
-                  <br>сгорит дом — не переживайте, мы выдадим вам новый.
-                  <br>Товар, не дом, конечно же.
-                </p>
+                <div class="tabs__block">
+                  <h3 class="title title--h2">Гарантия</h3>
+                  <p class="tabs__text">Если из-за возгорания купленного у нас товара у вас
+                    <br>сгорит дом — не переживайте, мы выдадим вам новый.
+                    <br>Товар, не дом, конечно же.
+                  </p>
+                </div>
                 <span class="tabs__logo"></span>
               </div>
               <div class="visually-hidden tabs__element">
-                <h3 class="title title--h2">Кредит</h3>
-                <p class="tabs__text">Залезть в долговую яму стало проще!
-                  <br>Кредитные консультанты подберут для вас наиболее выгодные
-                  <br>условия кредита. Выгодные для банка, разумеется.
-                </p>
+                <div class="tabs__block">
+                  <h3 class="title title--h2">Кредит</h3>
+                  <p class="tabs__text">Залезть в долговую яму стало проще!
+                    <br>Кредитные консультанты подберут для вас наиболее выгодные
+                    <br>условия кредита. Выгодные для банка, разумеется.
+                  </p>
+                </div>
                 <span class="tabs__logo"></span>
               </div>
             </div>
           </div>
 
-          <div class="exclusive-order">
-            <h2 class="visually-hidden">Эксклюзивный заказ</h2>
-            <div>
-              <span class="exclusive-order__logo"></span>
-              <span class="title exclusive-order__title">Доставим редкий товар под заказ</span>
-              <button class="exclusive-order__tip"><span class="exclusive-order__tip-icon"></span></button>
-            </div>
-          </div>
         </section>
 
+        <section class="exclusive-order">
+          <h2 class="visually-hidden">Эксклюзивный заказ</h2>
+
+          <span class="exclusive-order__logo"></span>
+          <span class="title exclusive-order__title">Доставим редкий товар под заказ</span>
+          <button class="exclusive-order__tip"><span class="exclusive-order__tip-icon"></span></button>
+
+        </section>
 
         <section class="about">
           <h2 class="visually-hidden">Информация о магазине</h2>
@@ -259,9 +265,9 @@
               Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
             </p>
             <ul class="about-info__delivery-list">
-              <li class="about-info__delivery-item ">Меловые линии</li>
-              <li class="about-info__delivery-item ">СДИК</li>
-              <li class="about-info__delivery-item ">ТоксБерри</li>
+              <li class="about-info__delivery-item "><span>Меловые линии</span></li>
+              <li class="about-info__delivery-item "><span>СДИК</span></li>
+              <li class="about-info__delivery-item "><span>ТоксБерри</span></li>
             </ul>
             <a href="#" class="title title--h3 about-info__link">Подробнее о нас</a>
           </div>
@@ -290,16 +296,20 @@
         <section class="subscription">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <div class="subscription__description">
-            <h3 class="title title--h2">Подпишитесь<br> на рассылку</h3>
-            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,
+            <h3 class="subscription-title title title--h2">Подпишитесь<br> на рассылку</h3>
+            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>
               длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
 
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="email" placeholder="Ваш e-mail" required><button class="subscription-form__btn"
-              type="submit">подписаться</button>
+            <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <button class="subscription-form__btn"
+              type="submit">подписаться
+            </button>
+            <div class="subscription-form__info">
+              <span class="subscription__text-icon"></span> Это бесплатно
+            </div>
           </form>
-          <p class="subscription__text"><span class="subscription__text-icon"></span> Это бесплатно</p>
         </section>
       </div>
     </main>
